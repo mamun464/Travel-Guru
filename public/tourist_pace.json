@@ -1,0 +1,195 @@
+[
+    {
+        "id": "coxsbazar123",
+        "name": "Cox's Bazar",
+        "cover_image_url": "https://i.imgur.com/e00uwf9.jpeg",
+        "rooms": [
+            {
+                "id": "cox001",
+                "title": "Beachfront Paradise",
+                "description": "Experience paradise by staying in this beachfront apartment. Perfect for a relaxing getaway, featuring stunning ocean views. 2 bedrooms, 2 beds, 2 baths. WiFi, air conditioning, and kitchen facilities available.",
+                "capacity": {
+                    "guests": 4,
+                    "bedrooms": 2,
+                    "beds": 2,
+                    "baths": 2
+                },
+                "amenities": [
+                    "WiFi",
+                    "Air Conditioning",
+                    "Kitchen"
+                ],
+                "rating": 4.8,
+                "num_reviews": 15,
+                "price_per_night": 100,
+                "image_url": "https://i.imgur.com/KU4XX2n.png"
+            },
+            {
+                "id": "cox002",
+                "title": "Seaside Retreat",
+                "description": "Enjoy the serenity of the seaside in this cozy retreat. Ideal for a peaceful stay with family or friends. 1 bedroom, 1 bed, 1 bath. WiFi and kitchenette available.",
+                "capacity": {
+                    "guests": 2,
+                    "bedrooms": 1,
+                    "beds": 1,
+                    "baths": 1
+                },
+                "amenities": [
+                    "WiFi",
+                    "Kitchenette"
+                ],
+                "rating": 4.5,
+                "num_reviews": 10,
+                "price_per_night": 80,
+                "image_url": "https://i.imgur.com/O7FdyEd.png"
+            },
+            {
+                "id": "cox003",
+                "title": "Luxury Villa with Pool",
+                "description": "Indulge in luxury with this stunning villa featuring a private pool and breathtaking ocean views. 3 bedrooms, 3 baths, spacious living areas. WiFi, air conditioning, and fully-equipped kitchen provided.",
+                "capacity": {
+                    "guests": 6,
+                    "bedrooms": 3,
+                    "beds": 3,
+                    "baths": 3
+                },
+                "amenities": [
+                    "WiFi",
+                    "Air Conditioning",
+                    "Kitchen",
+                    "Private Pool"
+                ],
+                "rating": 5.0,
+                "num_reviews": 25,
+                "price_per_night": 250,
+                "image_url": "https://i.imgur.com/IT1P432.png"
+            }
+        ]
+    },
+    {
+        "id": "sundarbans456",
+        "name": "Sundarbans",
+        "cover_image_url": "https://i.imgur.com/hLJkOgZ.png",
+        "rooms": [
+            {
+                "id": "sund001",
+                "title": "Jungle Cabin Retreat",
+                "description": "Escape to the heart of the jungle with this cozy cabin retreat. Experience nature at its finest. 1 bedroom, 1 bed, 1 bath. Basic amenities provided.",
+                "capacity": {
+                    "guests": 2,
+                    "bedrooms": 1,
+                    "beds": 1,
+                    "baths": 1
+                },
+                "amenities": [
+                    "Basic Amenities"
+                ],
+                "rating": 4.2,
+                "num_reviews": 8,
+                "price_per_night": 60,
+                "image_url": "https://i.imgur.com/KU4XX2n.png"
+            },
+            {
+                "id": "sund002",
+                "title": "Riverfront Lodge",
+                "description": "Stay close to nature with this charming riverfront lodge. Spectacular views and peaceful surroundings. 2 bedrooms, 2 beds, 1 bath. WiFi and basic amenities provided.",
+                "capacity": {
+                    "guests": 4,
+                    "bedrooms": 2,
+                    "beds": 2,
+                    "baths": 1
+                },
+                "amenities": [
+                    "WiFi",
+                    "Basic Amenities"
+                ],
+                "rating": 4.0,
+                "num_reviews": 5,
+                "price_per_night": 70,
+                "image_url": "https://i.imgur.com/O7FdyEd.png"
+            },
+            {
+                "id": "sund003",
+                "title": "Wilderness Retreat House",
+                "description": "Experience the wilderness with this rustic retreat house. Perfect for adventurers seeking an authentic jungle experience. 3 bedrooms, 2 baths. Basic amenities provided.",
+                "capacity": {
+                    "guests": 6,
+                    "bedrooms": 3,
+                    "beds": 3,
+                    "baths": 2
+                },
+                "amenities": [
+                    "Basic Amenities"
+                ],
+                "rating": 3.8,
+                "num_reviews": 12,
+                "price_per_night": 90,
+                "image_url": "https://i.imgur.com/IT1P432.png"
+            }
+        ]
+    },
+    {
+        "id": "bandarban789",
+        "name": "Bandarban",
+        "cover_image_url": "https://i.imgur.com/xJA6Bu4.png",
+        "rooms": [
+            {
+                "id": "band001",
+                "title": "Mountain View Chalet",
+                "description": "Wake up to breathtaking mountain views in this charming chalet. Ideal for nature lovers and adventurers. 2 bedrooms, 2 beds, 1 bath. WiFi and basic amenities provided.",
+                "capacity": {
+                    "guests": 4,
+                    "bedrooms": 2,
+                    "beds": 2,
+                    "baths": 1
+                },
+                "amenities": [
+                    "WiFi",
+                    "Basic Amenities"
+                ],
+                "rating": 4.5,
+                "num_reviews": 10,
+                "price_per_night": 120,
+                "image_url": "https://i.imgur.com/KU4XX2n.png"
+            },
+            {
+                "id": "band002",
+                "title": "Riverside Cottage",
+                "description": "Relax by the river in this cozy riverside cottage. Serene atmosphere and beautiful surroundings. 1 bedroom, 1 bed, 1 bath. WiFi and basic amenities provided.",
+                "capacity": {
+                    "guests": 2,
+                    "bedrooms": 1,
+                    "beds": 1,
+                    "baths": 1
+                },
+                "amenities": [
+                    "WiFi",
+                    "Basic Amenities"
+                ],
+                "rating": 4.3,
+                "num_reviews": 7,
+                "price_per_night": 80,
+                "image_url": "https://i.imgur.com/O7FdyEd.png"
+            },
+            {
+                "id": "band003",
+                "title": "Hilltop Retreat",
+                "description": "Escape to the hills with this secluded hilltop retreat. Spectacular views and tranquil surroundings. 3 bedrooms, 3 beds, 2 baths. WiFi and basic amenities provided.",
+                "capacity": {
+                    "guests": 6,
+                    "bedrooms": 3,
+                    "beds": 3,
+                    "baths": 2
+                },
+                "amenities": [
+                    "WiFi",
+                    "Basic Amenities"
+                ],
+                "rating": 4.7,
+                "num_reviews": 15,
+                "price_per_night": 150,
+                "image_url": "https://i.imgur.com/IT1P432.png"
+            }
+        ]
+    }
+]

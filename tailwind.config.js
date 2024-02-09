@@ -6,7 +6,10 @@ export default {
   ],
 
   theme: {
-    extend: {},
+    fontFamily: {
+      montserrat: "'Montserrat', sans-serif",
+      bebas_neue: "'Bebas Neue', sans-serif",
+    }
   },
   plugins: [require("daisyui")],
 }
