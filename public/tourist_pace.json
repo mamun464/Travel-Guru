@@ -1,8 +1,9 @@
 [
     {
-        "id": "coxsbazar123",
+        "loc_id": "coxsbazar123",
         "name": "Cox's Bazar",
-        "cover_image_url": "https://i.imgur.com/e00uwf9.jpeg",
+        "loc_des": "Cox's Bazar offers a variety of accommodations by the longest sea beach. Enjoy stunning ocean views and modern amenities in this coastal paradise.",
+        "cover_image_url": "https://i.ibb.co/x3pLGJ1/cox.jpg",
         "rooms": [
             {
                 "id": "cox001",
@@ -22,7 +23,7 @@
                 "rating": 4.8,
                 "num_reviews": 15,
                 "price_per_night": 100,
-                "image_url": "https://i.imgur.com/KU4XX2n.png"
+                "image_url": "https://i.ibb.co/YByPr9z/room1.jpg"
             },
             {
                 "id": "cox002",
@@ -41,7 +42,7 @@
                 "rating": 4.5,
                 "num_reviews": 10,
                 "price_per_night": 80,
-                "image_url": "https://i.imgur.com/O7FdyEd.png"
+                "image_url": "https://i.ibb.co/J2Q8S8H/room2.jpg"
             },
             {
                 "id": "cox003",
@@ -62,14 +63,15 @@
                 "rating": 5.0,
                 "num_reviews": 25,
                 "price_per_night": 250,
-                "image_url": "https://i.imgur.com/IT1P432.png"
+                "image_url": "https://i.ibb.co/cD7nwwb/room3.jpg"
             }
         ]
     },
     {
-        "id": "sundarbans456",
+        "loc_id": "sundarbans456",
         "name": "Sundarbans",
-        "cover_image_url": "https://i.imgur.com/hLJkOgZ.png",
+        "loc_des": "Discover the Sundarbans' wild expanse with snug cabins and riverside lodges. Immerse in nature's tranquility amid verdant foliage and serene riverbanks, promising an enriching escape into the heart of wilderness.",
+        "cover_image_url": "https://i.ibb.co/DbjmKvg/Sajek.jpg",
         "rooms": [
             {
                 "id": "sund001",
@@ -87,7 +89,7 @@
                 "rating": 4.2,
                 "num_reviews": 8,
                 "price_per_night": 60,
-                "image_url": "https://i.imgur.com/KU4XX2n.png"
+                "image_url": "https://i.ibb.co/YByPr9z/room1.jpg"
             },
             {
                 "id": "sund002",
@@ -106,7 +108,7 @@
                 "rating": 4.0,
                 "num_reviews": 5,
                 "price_per_night": 70,
-                "image_url": "https://i.imgur.com/O7FdyEd.png"
+                "image_url": "https://i.ibb.co/J2Q8S8H/room2.jpg"
             },
             {
                 "id": "sund003",
@@ -124,14 +126,15 @@
                 "rating": 3.8,
                 "num_reviews": 12,
                 "price_per_night": 90,
-                "image_url": "https://i.imgur.com/IT1P432.png"
+                "image_url": "https://i.ibb.co/cD7nwwb/room3.jpg"
             }
         ]
     },
     {
-        "id": "bandarban789",
+        "loc_id": "bandarban789",
         "name": "Bandarban",
-        "cover_image_url": "https://i.imgur.com/xJA6Bu4.png",
+        "loc_des": "Bandarban beckons with its scenic grandeur and rugged terrain, inviting adventurers to mountain chalets and riverside retreats. Embrace panoramic vistas and tranquil landscapes for an unparalleled mountain getaway.",
+        "cover_image_url": "https://i.ibb.co/6vfxxjK/Sreemongol.jpg",
         "rooms": [
             {
                 "id": "band001",
@@ -150,7 +153,7 @@
                 "rating": 4.5,
                 "num_reviews": 10,
                 "price_per_night": 120,
-                "image_url": "https://i.imgur.com/KU4XX2n.png"
+                "image_url": "https://i.ibb.co/YByPr9z/room1.jpg"
             },
             {
                 "id": "band002",
@@ -169,7 +172,7 @@
                 "rating": 4.3,
                 "num_reviews": 7,
                 "price_per_night": 80,
-                "image_url": "https://i.imgur.com/O7FdyEd.png"
+                "image_url": "https://i.ibb.co/J2Q8S8H/room2.jpg"
             },
             {
                 "id": "band003",
@@ -188,7 +191,7 @@
                 "rating": 4.7,
                 "num_reviews": 15,
                 "price_per_night": 150,
-                "image_url": "https://i.imgur.com/IT1P432.png"
+                "image_url": "https://i.ibb.co/cD7nwwb/room3.jpg"
             }
         ]
     }
