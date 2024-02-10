@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 
 
@@ -22,9 +22,9 @@ const Nav = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl w-36 h-20">
+                <Link to={"/"} className="btn btn-ghost text-xl w-36 h-20">
                     <img className="w-28 h-14" src="/logo2.png" alt="Logo" />
-                </a>
+                </Link>
             </div>
             <div className="relative hidden md:block">
                 <div className="absolute left-2 top-1/2 transform -translate-y-1/2">

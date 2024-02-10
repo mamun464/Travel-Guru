@@ -7,7 +7,7 @@
         "rooms": [
             {
                 "id": "cox001",
-                "title": "Beachfront Paradise",
+                "title": "Light bright airy stylish apt & safe peaceful stay",
                 "description": "Experience paradise by staying in this beachfront apartment. Perfect for a relaxing getaway, featuring stunning ocean views. 2 bedrooms, 2 beds, 2 baths. WiFi, air conditioning, and kitchen facilities available.",
                 "capacity": {
                     "guests": 4,
@@ -27,7 +27,7 @@
             },
             {
                 "id": "cox002",
-                "title": "Seaside Retreat",
+                "title": "Apartment in Lost Panorama",
                 "description": "Enjoy the serenity of the seaside in this cozy retreat. Ideal for a peaceful stay with family or friends. 1 bedroom, 1 bed, 1 bath. WiFi and kitchenette available.",
                 "capacity": {
                     "guests": 2,
@@ -46,7 +46,7 @@
             },
             {
                 "id": "cox003",
-                "title": "Luxury Villa with Pool",
+                "title": "AR Lounge & Pool (r&r + b&b)",
                 "description": "Indulge in luxury with this stunning villa featuring a private pool and breathtaking ocean views. 3 bedrooms, 3 baths, spacious living areas. WiFi, air conditioning, and fully-equipped kitchen provided.",
                 "capacity": {
                     "guests": 6,
@@ -75,7 +75,7 @@
         "rooms": [
             {
                 "id": "sund001",
-                "title": "Jungle Cabin Retreat",
+                "title": "Light bright airy stylish apt & safe peaceful stay",
                 "description": "Escape to the heart of the jungle with this cozy cabin retreat. Experience nature at its finest. 1 bedroom, 1 bed, 1 bath. Basic amenities provided.",
                 "capacity": {
                     "guests": 2,

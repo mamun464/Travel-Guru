@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Nav from "../NavBar/Nav";
 import { useEffect, useState } from "react";
 
@@ -111,7 +111,9 @@ const Booking = () => {
                         </div>
                     </div>
 
-                    <button className="font-montserrat font-medium text-black bg-[#F9A51A] py-5 w-full rounded-md mt-5">Start Booking</button>
+                    <Link to={`/booking-room/${selectedItem?.loc_id}`}>
+                        <button className="font-montserrat font-medium text-black bg-[#F9A51A] py-5 w-full rounded-md mt-5">Start Booking</button>
+                    </Link>
                 </div>
             </div>
 
