@@ -1,8 +1,77 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Nav_2 from "../NavBar/Nav_2";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { updateProfile } from "firebase/auth";
 
 
 const Registration = () => {
+
+    const { createUser, googleLogin, fbLogin } = useContext(AuthContext)
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleFBLogin = (e) => {
+        e.preventDefault();
+        fbLogin()
+            .then(result => {
+                console.log("Registration successful:", result.user);
+                toast.success('🦄 Registration  successful!');
+                navigate(location?.state ? location.state : '/')
+            }).catch(err => {
+                console.error(err);
+                toast.error(`Registration Failed! ${err.message}`);
+            })
+    };
+
+    const handleGoogleReg = (e) => {
+        e.preventDefault();
+        googleLogin()
+            .then(result => {
+                console.log("Login successful:", result.user);
+                toast.success('🦄 Login successful!');
+                navigate(location?.state ? location.state : '/')
+            }).catch(err => {
+                console.error(err);
+                toast.error(`Login Failed! ${err.message}`);
+            })
+    };
+
+    const handleRegistration = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const firstName = form.get('firstName');
+        const lastName = form.get('lastName');
+        const email = form.get('email');
+        const password = form.get('password');
+        const confirmPassword = form.get('confirmPassword');
+
+        if (password != confirmPassword) {
+            toast.error(`Confirm Password not match!`);
+        } else {
+            createUser(email, password)
+                .then(result => {
+                    updateProfile(result.user, {
+                        displayName: `${firstName} ${lastName}`
+                    }).then(re => {
+                        console.log("User updated",);
+                    }).catch(err => {
+                        console.error(err);
+                    });
+                    console.log("Registration successful:", result.user);
+                    toast.success('🦄 Registration successful!');
+                    navigate(location?.state ? location.state : '/')
+                }).catch(err => {
+                    console.error(err);
+                    toast.error(`Registration Failed! ${err.message}`);
+                })
+        }
+
+
+    };
     return (
         <>
             <Nav_2></Nav_2>
@@ -11,7 +80,7 @@ const Registration = () => {
                 <div className="w-full h-auto  border border-[#ABABAB] rounded p-8 font-montserrat mt-10">
                     <h1 className="text-black text-2xl font-bold mb-12">Create an account</h1>
 
-                    <form>
+                    <form onSubmit={handleRegistration}>
                         <div className="mb-6">
                             {/* <label className="block text-black font-medium">Username or Email</label> */}
                             <input
@@ -20,6 +89,7 @@ const Registration = () => {
                                 className="border-b-2  border-[#C5C5C5] font-medium  focus:border-[#F9A51A] w-full py-2 px-3 pl-0 text-black focus:outline-none"
                                 placeholder="First Name"
                                 required
+                                name="firstName"
                             />
                         </div>
                         <div className="mb-6">
@@ -30,6 +100,7 @@ const Registration = () => {
                                 className="border-b-2  border-[#C5C5C5] font-medium  focus:border-[#F9A51A] w-full py-2 px-3 pl-0 text-black focus:outline-none"
                                 placeholder="Last Name"
                                 required
+                                name="lastName"
                             />
                         </div>
                         <div className="mb-6">
@@ -40,6 +111,7 @@ const Registration = () => {
                                 className="border-b-2  border-[#C5C5C5] font-medium  focus:border-[#F9A51A] w-full py-2 px-3 pl-0 text-black focus:outline-none"
                                 placeholder="Username or Email"
                                 required
+                                name="email"
                             />
                         </div>
                         <div className="mb-6">
@@ -50,6 +122,7 @@ const Registration = () => {
                                 className="border-b-2 border-[#C5C5C5] font-medium focus:border-[#F9A51A] w-full py-2 px-3 mt-1 pl-0 text-black focus:outline-none"
                                 placeholder="Confirm Password"
                                 required
+                                name="password"
                             />
                         </div>
                         <div className="mb-6">
@@ -60,6 +133,7 @@ const Registration = () => {
                                 className="border-b-2 border-[#C5C5C5] font-medium focus:border-[#F9A51A] w-full py-2 px-3 mt-1 pl-0 text-black focus:outline-none"
                                 placeholder="Password"
                                 required
+                                name="confirmPassword"
                             />
                         </div>
 
@@ -79,12 +153,13 @@ const Registration = () => {
 
                 <div className="mb-12">
                     <div className="flex justify-center">
-                        <button className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/fb.png" alt="" /> Continue with Facebook</button>
+                        <button onClick={handleFBLogin} className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/fb.png" alt="" /> Continue with Facebook</button>
                     </div>
                     <div className="flex justify-center mt-3">
-                        <button className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/google.png" alt="" /> Continue with Google</button>
+                        <button onClick={handleGoogleReg} className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/google.png" alt="" /> Continue with Google</button>
                     </div>
                 </div>
+                <ToastContainer />
             </div>
 
 

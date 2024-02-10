@@ -5,6 +5,7 @@ import Booking from "../Componentes/Booking/Booking";
 import RoomBooking from "../Componentes/Room/RoomBooking";
 import Login from "../Componentes/Login/Login";
 import Registration from "../Componentes/Registration/Registration";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const Routes = createBrowserRouter([
@@ -24,7 +25,7 @@ const Routes = createBrowserRouter([
             },
             {
                 path: "/booking-room/:id",
-                element: <RoomBooking></RoomBooking>,
+                element: <PrivateRoutes><RoomBooking></RoomBooking></PrivateRoutes>,
 
             },
             {

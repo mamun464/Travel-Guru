@@ -1,18 +1,64 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Nav_2 from "../NavBar/Nav_2";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () => {
+    const { loginWithEmailPassword, googleLogin, fbLogin } = useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleGoogleLogin = (e) => {
+        e.preventDefault();
+        googleLogin()
+            .then(result => {
+                console.log("Login successful:", result.user);
+                toast.success('🦄 Login successful!');
+                navigate(location?.state ? location.state : '/')
+            }).catch(err => {
+                console.error(err);
+                toast.error(`Login Failed! ${err.message}`);
+            })
+    };
+    const handleFBLogin = (e) => {
+        e.preventDefault();
+        fbLogin()
+            .then(result => {
+                console.log("Login successful:", result.user);
+                toast.success('🦄 Login successful!');
+                navigate(location?.state ? location.state : '/')
+            }).catch(err => {
+                console.error(err);
+                toast.error(`Login Failed! ${err.message}`);
+            })
+    };
+
     const handleLogin = (e) => {
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password);
+
+        loginWithEmailPassword(email, password)
+
+            .then(result => {
+                console.log("Login successful:", result.user);
+                toast.success('🦄 Login successful!');
+                navigate(location?.state ? location.state : '/')
+            }).catch(err => {
+                console.error(err);
+                toast.error(`Login Failed! ${err.message}`);
+            })
+
     };
     return (
         <>
             <Nav_2></Nav_2>
+
+
 
             <div className="w-[570px] mx-auto">
                 <div className="w-full h-auto  border border-[#ABABAB] rounded p-8 font-montserrat mt-10">
@@ -68,12 +114,13 @@ const Login = () => {
 
                 <div className="mb-12">
                     <div className="flex justify-center">
-                        <button className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/fb.png" alt="" /> Continue with Facebook</button>
+                        <button onClick={handleFBLogin} className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/fb.png" alt="" /> Continue with Facebook</button>
                     </div>
                     <div className="flex justify-center mt-3">
-                        <button className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/google.png" alt="" /> Continue with Google</button>
+                        <button onClick={handleGoogleLogin} className="relative w-[461px] h-12 font-medium text-base py-3 border border-[#C7C7C7] rounded-3xl hover:bg-gray-300"> <img className="absolute left-2 bottom-1 w-[37px] h-[37px]" src="/google.png" alt="" /> Continue with Google</button>
                     </div>
                 </div>
+                <ToastContainer />
             </div>
 
 

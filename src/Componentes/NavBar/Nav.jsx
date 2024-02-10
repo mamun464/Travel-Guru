@@ -1,9 +1,23 @@
 import { Link, NavLink } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
+import { useContext } from 'react';
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 
 const Nav = () => {
+    const { user, logOutUser } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOutUser()
+            .then(() => {
+                console.log("Logout successful:");
+            })
+            .catch(err => {
+                console.error(err);
+            })
+
+
+    }
     const navLink = <>
         <li><NavLink to={"/News"}>News</NavLink></li>
         <li><NavLink to={"/Destination"}>Destination</NavLink></li>
@@ -48,7 +62,14 @@ const Nav = () => {
             </div>
 
             <div className="navbar-end ">
-                <Link to={"/login"} className="btn bg-[#F9A51A] w-24 h-11 rounded-md text-Black font-medium border-0 outline-none ">Login</Link>
+                {
+                    user ?
+                        <Link onClick={handleLogOut} className="btn bg-[#F9A51A] w-24 h-11 rounded-md text-Black font-medium border-0 outline-none ">LogOut</Link>
+                        :
+                        <Link to={"/login"} className="btn bg-[#F9A51A] w-24 h-11 rounded-md text-Black font-medium border-0 outline-none ">Login</Link>
+                }
+
+
             </div>
         </div>
     );
