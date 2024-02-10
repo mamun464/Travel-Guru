@@ -32,6 +32,7 @@ const RoomBooking = () => {
     return (
         <div className="max-w-7xl mx-auto">
             <Nav_2></Nav_2>
+            <hr className=" border-[#D1D1D1] " />
             <div className="mt-4">
                 <p className="text-[#2B2B2B]">252 stays <span>Apr 13-17 3</span> guests</p>
                 <h1 className="text-2xl font-bold mb-6">Stay in {selectedItem?.name}</h1>

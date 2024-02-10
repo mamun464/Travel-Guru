@@ -36,15 +36,12 @@ const Nav_2 = () => {
                 </div>
 
                 <div className="navbar-end ">
-                    <a className="btn bg-[#F9A51A] w-24 h-11 rounded-md text-Black font-medium border-0 outline-none ">Login</a>
+                    <Link to={"/login"} className="btn bg-[#F9A51A] w-24 h-11 rounded-md text-Black font-medium border-0 outline-none ">Login</Link>
                 </div>
 
 
             </div>
-            <div className=" max-w-7xl mx-auto text-black">
 
-                <hr className=" border-[#D1D1D1] " />
-            </div>
 
         </>
     );
