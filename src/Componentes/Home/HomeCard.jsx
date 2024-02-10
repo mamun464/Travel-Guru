@@ -6,7 +6,7 @@ const HomeCard = ({ location, clickCard, selectedCard_id }) => {
     const { loc_id, cover_image_url, name } = location;
     const borderColor = selectedCard_id === loc_id ? '#FBBC04' : '#C7C8CC';
     return (
-        <div onClick={() => { clickCard(loc_id) }} className={`w-[270px] h-[416px] rounded-[20px] shadow-2xl border-4 border-solid border-[${borderColor}] cursor-pointer`} style={{
+        <div onClick={() => { clickCard(loc_id) }} className={`relative w-[270px] h-[416px] rounded-[20px] shadow-2xl border-4 border-solid border-[${borderColor}] cursor-pointer`} style={{
             backgroundImage: `linear-gradient(0deg, #000 0.1%, rgba(0, 0, 0, 0.00) 69.96%), url(${cover_image_url})`,
             backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
