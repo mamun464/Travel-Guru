@@ -19,10 +19,10 @@ const Nav = () => {
 
     }
     const navLink = <>
-        <li><NavLink to={"/News"}>News</NavLink></li>
-        <li><NavLink to={"/Destination"}>Destination</NavLink></li>
-        <li><NavLink to={"/Blog"}>Blog</NavLink></li>
-        <li><NavLink to={"/Contact"}>Contact</NavLink></li>
+        <li><NavLink to={"/login"}>News</NavLink></li>
+        <li><NavLink to={"/login"}>Destination</NavLink></li>
+        <li><NavLink to={"/login"}>Blog</NavLink></li>
+        <li><NavLink to={"/login"}>Contact</NavLink></li>
     </>
     return (
         <div className="navbar  max-w-7xl mx-auto text-white relative">
