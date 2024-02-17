@@ -18,10 +18,10 @@ const Nav_2 = () => {
 
     }
     const navLink = <>
-        <li><NavLink to={"/News"}>News</NavLink></li>
-        <li><NavLink to={"/Destination"}>Destination</NavLink></li>
-        <li><NavLink to={"/Blog"}>Blog</NavLink></li>
-        <li><NavLink to={"/Contact"}>Contact</NavLink></li>
+        <li><NavLink to={"/"}>News</NavLink></li>
+        <li><NavLink to={"/"}>Destination</NavLink></li>
+        <li><NavLink to={"/"}>Blog</NavLink></li>
+        <li><NavLink to={"/"}>Contact</NavLink></li>
     </>
     return (
         <>
