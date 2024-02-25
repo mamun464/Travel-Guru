@@ -6,6 +6,7 @@ import RoomBooking from "../Componentes/Room/RoomBooking";
 import Login from "../Componentes/Login/Login";
 import Registration from "../Componentes/Registration/Registration";
 import PrivateRoutes from "./PrivateRoutes";
+import App from "../App";
 
 
 const Routes = createBrowserRouter([
@@ -36,6 +37,11 @@ const Routes = createBrowserRouter([
             {
                 path: "/register",
                 element: <Registration></Registration>,
+
+            },
+            {
+                path: "/task-manager",
+                element: <App></App>,
 
             },
 
